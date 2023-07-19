@@ -1,0 +1,16 @@
+<div>
+  <label for="username">Username:</label>
+  <input type="text" id="username" [(ngModel)]="username" required />
+
+  <button (click)="searchNominee()">Search Nominee</button>
+</div>
+
+<div *ngIf="nominee">
+  <h3>Nominee Details</h3>
+  <p>Full Name: {{ nominee.fullName }}</p>
+  <p>Gender: {{ nominee.gender }}</p>
+  <p>ID Proof Type: {{ nominee.idProofType }}</p>
+  <!-- Display other nominee details -->
+
+  <button (click)="deleteNominee()">Delete Nominee</button>
+</div>

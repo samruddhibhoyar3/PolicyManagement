@@ -1,0 +1,173 @@
+<div class="container">
+  <div>
+    <div class="card">
+      <div class="card-header">
+        <h3 style="text-align: center">Create Profile</h3>
+      </div>
+      <div class="card-body">
+        <form class="form">
+          <div class="form-group">
+            <label for="id">Id:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="id"
+              [(ngModel)]="User.id"
+              name="id"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              [(ngModel)]="User.firstName"
+              name="firstName"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="middleName">Middle Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="middleName"
+              [(ngModel)]="User.middleName"
+              name="middleName"
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              [(ngModel)]="User.lastName"
+              name="lastName"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input
+              type="date"
+              class="form-control"
+              id="dateOfBirth"
+              [(ngModel)]="User.dateOfBirth"
+              name="dateOfBirth"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select
+              class="form-control"
+              id="gender"
+              [(ngModel)]="User.gender"
+              name="gender"
+              required
+            >
+              <option value="">-- Select Gender --</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+              <option value="O">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="profession">Profession:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="profession"
+              [(ngModel)]="User.profession"
+              name="profession"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="currentAddress">Current Address:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="currentAddress"
+              [(ngModel)]="User.currentAddress"
+              name="currentAddress"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="nationality">Nationality:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nationality"
+              [(ngModel)]="User.nationality"
+              name="nationality"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="idProofType">ID Proof Type:</label>
+            <select
+              class="form-control"
+              id="idProofType"
+              [(ngModel)]="User.idProof"
+              name="idProofType"
+              required
+            >
+              <option value="">-- Select ID Proof Type --</option>
+              <option value="Aadhar">Aadhar Card</option>
+              <option value="Passport">Passport</option>
+              <option value="DrivingLicence">Driving License</option>
+              <option value="PAN">PAN</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="docNumber">Document Number:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="docNumber"
+              [(ngModel)]="User.docNumber"
+              name="docNumber"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phoneNumber"
+              [(ngModel)]="User.phoneNumber"
+              name="phoneNumber"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              [(ngModel)]="User.email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              (click)="adduserprofile()"
+            >
+              Add Profile
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

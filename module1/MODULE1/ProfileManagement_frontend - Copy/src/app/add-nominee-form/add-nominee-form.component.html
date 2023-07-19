@@ -1,0 +1,94 @@
+<div class="container">
+  <div>
+    <div class="card">
+      <div class="card-header">
+        <h3 style="align-content: center">Add Nominee</h3>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="submitForm()" class="form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              [(ngModel)]="nominee.username"
+              name="username"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Nominee Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              [(ngModel)]="nominee.name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select
+              class="form-control"
+              id="gender"
+              [(ngModel)]="nominee.gender"
+              name="gender"
+              required
+            >
+              <option value="">-- Select Gender --</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+              <option value="O">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="idProofType">ID Proof Type:</label>
+            <select
+              class="form-control"
+              id="idProofType"
+              [(ngModel)]="nominee.idProofType"
+              name="idProofType"
+              required
+            >
+              <option value="">-- Select ID Proof Type --</option>
+              <option value="Aadhar">Aadhar Card</option>
+              <option value="Passport">Passport</option>
+              <option value="DrivingLicense">Driving License</option>
+              <option value="PAN">PAN</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="nomineeType">Nominee Type:</label>
+            <select
+              class="form-control"
+              id="nomineeType"
+              [(ngModel)]="nominee.nomineeType"
+              name="nomineeType"
+              required
+            >
+              <option value="">-- Select Nominee Type --</option>
+              <option value="parent">Parent</option>
+              <option value="child">Child</option>
+              <option value="sibling">Sibling</option>
+              <option value="spouse">Spouse</option>
+              <option value="cousin">Cousin</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Add Nominee</button>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          Don't have an account?<a href="#">Sign Up</a>
+        </div>
+        <div class="d-flex justify-content-center">
+          <a href="#">Forgot your password?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
