@@ -1,0 +1,20 @@
+.duebtn{
+    margin: 10px;
+}
+
+.dueList{
+    border-radius: 10px;
+}
+.dueListhadder{
+    border-radius: 10px;
+}
+.dueh2{
+    display: flex;
+    align-items: center;
+}
+.duelist {
+    width: 700px;
+}
+.list-group-item{
+    border-color: rgb(31, 6, 100);
+}

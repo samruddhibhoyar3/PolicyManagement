@@ -1,0 +1,41 @@
+<div class="container form-control">
+    <h2 class="text-center">Add Premium Payments</h2>
+    <div *ngIf="formSubmitted" class="alert alert-success mt-3">
+      Form submitted successfully!
+    </div>
+    <form [formGroup]="premiumForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="paymentDate">Payment Date:</label>
+        <input type="date" id="paymentDate" formControlName="paymentDate" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="bankTransactionId">Bank Transaction ID:</label>
+        <input type="text" id="bankTransactionId" formControlName="bankTransactionId" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="premiumAmount">Premium Amount:</label>
+        <input type="number" id="premiumAmount" formControlName="premiumAmount" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="lateFee">Late Fee:</label>
+        <input type="number" id="lateFee" formControlName="lateFee" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="paymentMethodId">Payment Method ID:</label>
+        <select id="paymentMethodId" formControlName="paymentMethodId" class="form-select" required>
+          <option value="1">UPI</option>
+          <option value="2">CASH</option>
+          <option value="3">BANK</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="premiumMasterId">Premium Master ID:</label>
+        <input type="number" id="premiumMasterId" formControlName="premiumMasterId" class="form-control" required>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary text-right">Submit</button>
+    </form>
+    <!-- <div *ngIf="formSubmitted" class="alert alert-success mt-3">
+        Form submitted successfully!
+      </div> -->
+  </div>

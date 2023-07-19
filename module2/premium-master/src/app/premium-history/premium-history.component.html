@@ -1,0 +1,53 @@
+<div class="container ">
+    <h2>Premium History based on Username or Subscription ID</h2>
+    <div class="row">
+      <div class="w-50 d-flex justify-content-between">
+        <div class="input-group mb-3 mr-2">
+            <input [(ngModel)]="searchQuery" placeholder="Enter Username or Subscription ID" class="form-control mr-2" />
+            <!-- <div class="input-group-append ml-2">
+              <button class="btn btn-primary" (click)="fetchData()">Search</button>
+            </div> -->
+          </div>
+          <div>
+            &nbsp;
+            &nbsp;
+          </div>
+          <div class="input-group-append ml-2">
+            <button class="btn btn-primary" (click)="fetchData()">Search</button>
+          </div>
+      </div>
+    </div>
+    <div *ngIf="data" class="container premiumHistory">
+      <h2>Search Result:</h2>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Policy ID:</strong> {{ data.policyId }}
+        </li>
+        <li class="list-group-item">
+          <strong>Username:</strong> {{ data.username }}
+        </li>
+        <li class="list-group-item">
+          <strong>Subscription ID:</strong> {{ data.subscriptionId }}
+        </li>
+        <li class="list-group-item">
+          <strong>Premium Start Date:</strong> {{ data.premiumStartDate }}
+        </li>
+        <li class="list-group-item">
+          <strong>Premium Amount:</strong> {{ data.premiumAmount }}
+        </li>
+        <li class="list-group-item">
+          <strong>Last Payment Date:</strong> {{ data.lastPaymentDate }}
+        </li>
+        <li class="list-group-item">
+          <strong>Current Policy Status:</strong> {{ data.currentPolicyStatus }}
+        </li>
+        <li class="list-group-item">
+          <strong>Total Number of Premiums:</strong> {{ data.totalNumberOfPremiums }}
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="isSearchQuerynull" class="alert alert-danger mt-3 searchQuery ">
+      Please enter valid Username or subscriptionId.
+    </div>
+  </div>
+  
